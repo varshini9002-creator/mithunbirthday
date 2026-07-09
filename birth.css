@@ -1,0 +1,420 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #7b2ff7, #9d4edd, #c77dff, #f72585);
+    background-size: 600% 600%;
+    animation: gradientMove 8s ease infinite;
+}
+
+.sparkle {
+    height: 3px;
+    width: 3px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    animation: twinkle 2s infinite;
+    box-shadow: 0 0 8px white;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.s1 {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.s2 {
+    top: 35%;
+    left: 80%;
+    animation-delay: 0.5s;
+}
+
+.s3 {
+    top: 70%;
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.s4 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.s5 {
+    top: 85%;
+    left: 35%;
+    animation-delay: 0.5s;
+}
+
+.s6 {
+    top: 15%;
+    left: 76%;
+    animation-delay: 1s;
+}
+
+.s7 {
+    top: 87%;
+    left: 40%;
+    animation-delay: 0s;
+}
+
+.s8 {
+    top: 35%;
+    left: 90%;
+    animation-delay: 0.5s;
+}
+
+.s9 {
+    top: 70%;
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.s10 {
+    top: 74%;
+    left: 60%;
+    animation-delay: 0s;
+}
+
+.s11 {
+    top: 59%;
+    left: 76%;
+    animation-delay: 0.5s;
+}
+
+.s12 {
+    top: 77%;
+    left: 19%;
+    animation-delay: 1s;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.balloon {
+    width: 50px;
+    height: 65px;
+    border-radius: 50% 50% 45% 45%;
+    position: absolute;
+    animation: float 8s linear infinite;
+    bottom: -60px;
+    z-index: 30;
+    opacity: 0.8;
+}
+
+.balloon::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    top: 12px;
+    left: 10px;
+}
+
+.b1 {
+    left: 10%;
+    background: #ff69b4;
+    animation-duration: 8s;
+
+}
+
+.b2 {
+    left: 35%;
+    background: #4fc3f7;
+    animation-duration: 10s;
+}
+
+.b3 {
+    left: 60%;
+    background: #ffd54f;
+    animation-duration: 7s;
+}
+
+.b4 {
+    left: 85%;
+    background: #ba68c8;
+    animation-duration: 9s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(15px, -200px);
+    }
+
+    50% {
+        transform: translate(-10px, -400px);
+    }
+
+    75% {
+        transform: translate(15px, -600px);
+    }
+
+    100% {
+        transform: translate(-10px, -900px);
+    }
+}
+
+.hero {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 20;
+    animation: floatCard 3s ease-in-out infinite;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes floatCard {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.surprise {
+    display: none;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeZoom 1s ease forwards;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+}
+
+@keyframes fadeZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.string {
+    height: 40px;
+    width: 2px;
+    background: white;
+    position: absolute;
+    top: 65px;
+    transform: translateX(-50%);
+    left: 50%;
+    border-radius: 10px;
+}
+
+.surpriseBtn {
+    margin-top: 20px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff4d9d, #7b2ff7);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(123, 47, 247, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.surpriseBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(123, 47, 247, 0.6);
+}
+
+.surpriseBtn:active {
+    transform: scale(0.95);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#photo {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 30;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    border-radius: 2px;
+    animation: confettiFall 3s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.wish {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#ageCounter {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffd54f;
+    margin-top: 15px;
+    text-shadow: 0 0 10px #ffd54f;
+}
+
+.surprise h1 {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    animation: glow 2s ease-in-out infinite alternate,
+        pulseText 2s ease-in-out infinite;
+    text-shadow: 0 0 10px white;
+}
+
+.heart {
+    display: inline-block;
+    color: red;
+    text-shadow:
+        0 0 5px red,
+        0 0 10px red,
+        0 0 20px red,
+        0 0 35px #ff4d4d;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes pulseText {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.finalSurprise {
+    display: none;
+    text-align: center;
+    color: white;
+    animation: fadeZoom 1s ease forwards;
+}
+
+.finalSurprise img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px white;
+}
+
+.pop {
+    animation: pop .4s forwards;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
